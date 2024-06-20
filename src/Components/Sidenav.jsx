@@ -25,9 +25,9 @@ export default function Sidenav() {
     ]
 
   return (
-   <Stack boxShadow="lg" maxW="16rem" h="100vh"  justify="space-between" mb="6">
+   <Stack boxShadow="lg" W="18rem" h="100vh"  justify="space-between" pb="6" px="4">
        <Box>
-       <Heading as="h1" fontSize="20px" pt="3.5rem" textAlign="center">@DOSOMECODING</Heading>
+       <Heading as="h1" fontSize="20px" pt="3.5rem" textAlign="center" px="4" color="#5F00D9">@DOSOMECODING</Heading>
         
         <Box mt='6' mx="3">
            { navLinks.map((nav)=>(
@@ -60,7 +60,7 @@ export default function Sidenav() {
                 }}>
                     <Icon as={BiSupport}></Icon>
                     <Text>Support</Text>
-                </HStack>
+            </HStack>
           
          </Box>
         
