@@ -6,6 +6,8 @@ import DashboardLayout from '../../Components/DashboardLayout'
 import PortfolioSection from './Components/PortfolioSection'
 import PriceSection from './Components/PriceSection'
 import RecentTransactions from './Components/RecentTransactions'
+import Loans from './Components/Loans'
+import Contacts from './Components/Contacts'
 
 
 function Dashboard() {
@@ -20,15 +22,21 @@ function Dashboard() {
       
       }
       
-     gap={8}>
+     gap={3}>
         <GridItem colSpan={2}>
             <PortfolioSection></PortfolioSection>
         </GridItem>
-        <GridItem colSpan={1} >
+        <GridItem colSpan={1} pr="2" >
             <PriceSection></PriceSection>
         </GridItem>
-        <GridItem colSpan={1}>
+        <GridItem colSpan={1} pl="2">
            <RecentTransactions></RecentTransactions>
+        </GridItem>
+        <GridItem colSpan={1} pr="2">
+         <Loans></Loans>
+        </GridItem>
+        <GridItem colSpan={1}  pl="2">
+         <Contacts></Contacts>
         </GridItem>
       </Grid>
     </DashboardLayout>

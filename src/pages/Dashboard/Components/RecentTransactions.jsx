@@ -16,9 +16,10 @@ import {
 
 import { FaArrowUp } from "react-icons/fa6";
 import { FaArrowDown } from "react-icons/fa6";
-import { FaMinusCircle, FaPlusCircle } from "react-icons/fa";
+import { FaBtc, FaMinusCircle, FaPlusCircle } from "react-icons/fa";
 import { HiCurrencyDollar } from "react-icons/hi";
 import { RiBtcFill } from "react-icons/ri";
+import { CgDollar } from "react-icons/cg";
 
 function RecentTransactions() {
   return (
@@ -31,12 +32,12 @@ function RecentTransactions() {
     <HStack justify="space-between">
         <HStack spacing="4">
           
-            <Tag borderRadius="50" px="12px" py="12px" fontSize="16px">
-              <HiCurrencyDollar />
+            <Tag borderRadius="50" px="4px" py="4px" fontSize="20px">
+            <CgDollar />
             </Tag>
             <Stack spacing="0">
               <Text fontSize="16px" textColor="#171717">
-                INR Deposit
+                Taka Deposit
               </Text>
               <Text fontSize="14px" textColor="#797E82">
                 2022-06-09 7:06 PM
@@ -51,8 +52,8 @@ function RecentTransactions() {
       <HStack justify="space-between">
         <HStack spacing="4">
           
-            <Tag borderRadius="50" px="12px" py="12px" fontSize="16px">
-            <RiBtcFill />
+            <Tag borderRadius="50" px="4px" py="4px" fontSize="20px">
+            <FaBtc />
             </Tag>
             <Stack spacing="0">
               <Text fontSize="16px" textColor="#171717">
@@ -81,12 +82,12 @@ function RecentTransactions() {
       <HStack justify="space-between">
         <HStack spacing="4">
           
-            <Tag borderRadius="50" px="12px" py="12px" fontSize="16px">
-              <HiCurrencyDollar />
+            <Tag borderRadius="50" px="4px" py="4px" fontSize="20px">
+            <CgDollar />
             </Tag>
             <Stack spacing="0">
               <Text fontSize="16px" textColor="#171717">
-              INR Deposit
+              Taka Deposit
               </Text>
               <Text fontSize="14px" textColor="#797E82">
                 2022-06-09 7:06 PM
