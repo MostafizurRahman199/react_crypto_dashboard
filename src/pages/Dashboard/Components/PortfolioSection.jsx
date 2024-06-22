@@ -5,6 +5,7 @@ import { FaInfoCircle } from "react-icons/fa";
 import { MdGetApp } from "react-icons/md";
 import { FaArrowUp } from "react-icons/fa6";
 import { FaArrowDown } from "react-icons/fa6";
+import { FaBangladeshiTakaSign } from "react-icons/fa6";
 
 function PortfolioSection() {
   return (
@@ -14,7 +15,7 @@ function PortfolioSection() {
       borderRadius="xl"
       spacing={{
         base:"8",
-        lg:"12"
+        lg:"16"
       }}
       justify="space-between"
       align={{
@@ -35,6 +36,15 @@ function PortfolioSection() {
           base: "column",
           xl: "row",
         }}
+
+       spacing={{
+        base: '4',
+        sm: '8', 
+        md: '8', 
+        lg: '8',
+        xl: '20',
+        '2xl': '20',
+       }}
       >
         <Stack>
           <HStack alignItems="center">
@@ -81,9 +91,10 @@ function PortfolioSection() {
             </HStack>
             <HStack>
               <Text textColor="#171717" fontSize="24px" fontWeight="bold">
-                ₹ 1,300.00
+            
+             <HStack> <FaBangladeshiTakaSign /> <Text>1,300.00</Text></HStack>
               </Text>
-              <Tag>INR</Tag>
+              <Tag>TAKA</Tag>
             </HStack>
           </HStack>
         </Stack>
