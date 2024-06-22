@@ -18,12 +18,20 @@ import { IoLogOutOutline } from "react-icons/io5";
 import { IoSettingsOutline } from "react-icons/io5";
 import { MdOutlineAccountBox } from "react-icons/md";
 import { VscAccount } from "react-icons/vsc";
-function Topnav() {
+import { TiThMenuOutline } from "react-icons/ti";
+
+function Topnav({ title, onOpen }) {
   return (
-    <Box >
-      <HStack maxW="60rem" justify="space-between" mx="auto" px="32" h="16">
+    <Box>
+      <HStack W="70rem" justify="space-between" mx="auto" h="16" px="16"  bg="white">
+        <Icon onClick={onOpen} fontSize="24px"
+        display={{
+            base: "block",
+            lg:"none"
+        }}
+        >{<TiThMenuOutline />} </Icon>
         <Heading fontWeight="medium" fontSize="28px">
-          Dashboad
+          {title}
         </Heading>
 
         <Menu>
@@ -37,7 +45,7 @@ function Topnav() {
               </Icon>
               Profile
             </MenuItem>
-           
+
             <MenuItem>
               <Icon px="1" fontSize="26px">
                 <IoSettingsOutline />
@@ -49,7 +57,7 @@ function Topnav() {
                 <IoLogOutOutline />
               </Icon>
               Logout
-            </MenuItem> 
+            </MenuItem>
           </MenuList>
         </Menu>
       </HStack>

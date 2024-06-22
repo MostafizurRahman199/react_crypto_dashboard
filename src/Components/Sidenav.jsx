@@ -1,12 +1,9 @@
 import { Box, HStack, Heading, Icon, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
-import "@fontsource/ubuntu"; // Defaults to weight 400
+import "@fontsource/ubuntu";
 import { RxDashboard } from "react-icons/rx";
-{/* <RxDashboard /> */}
 import { GrTransaction } from "react-icons/gr";
-{/* <GrTransaction /> */}
 import { BiPointer, BiSupport } from "react-icons/bi";
-{/* <BiSupport /> */}
 
 
 export default function Sidenav() {
@@ -25,7 +22,20 @@ export default function Sidenav() {
     ]
 
   return (
-   <Stack boxShadow="lg" W="18rem" h="100vh"  justify="space-between" pb="6" px="4">
+   <Stack  h="100vh"  justify="space-between" pb="6" px="4" bg="white"
+   
+boxShadow={{
+    base:"none",
+    lg:"lg"
+}}
+
+w={{
+ base:"full"   ,
+ lg:"18rem"
+}}
+
+
+   >
        <Box>
        <Heading as="h1" fontSize="20px" pt="3.5rem" textAlign="center" px="4" color="#5F00D9">@DOSOMECODING</Heading>
         
