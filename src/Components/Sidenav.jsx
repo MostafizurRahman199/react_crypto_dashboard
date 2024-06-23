@@ -4,6 +4,7 @@ import "@fontsource/ubuntu";
 import { RxDashboard } from "react-icons/rx";
 import { GrTransaction } from "react-icons/gr";
 import { BiPointer, BiSupport } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 export default function Sidenav() {
   const navLinks = [
@@ -14,8 +15,8 @@ export default function Sidenav() {
     },
     {
       icon: GrTransaction,
-      text: "Transactions",
-      link: "transactions",
+      text: "Transaction",
+      link: "/transaction",
     },
   ];
 
@@ -49,30 +50,33 @@ export default function Sidenav() {
 
         <Box mt="6" mx="3">
           {navLinks.map((nav) => (
-            <HStack
-              key={nav.text}
-              px="4"
-              py="3"
-              textColor="#797E82"
-              fontSize="14px"
-              borderRadius="10px"
-              _hover={{
-                textColor: "#171717",
-                fontWeight: "bold",
-                bg: "#F3F3F7",
-                border: "10px",
-              }}
-            >
-              <Icon as={nav.icon}></Icon>
-              <Text>{nav.text}</Text>
-            </HStack>
+            <Link to={nav.link} key={nav.text}>
+              <HStack
+                key={nav.text}
+                px="4"
+                py="3"
+                textColor="#797E82"
+                fontSize="14px"
+                borderRadius="10px"
+                _hover={{
+                  textColor: "#171717",
+                  fontWeight: "bold",
+                  bg: "#F3F3F7",
+                  border: "10px",
+                }}
+              >
+                <Icon as={nav.icon}></Icon>
+                <Text>{nav.text}</Text>
+              </HStack>
+            </Link>
           ))}
         </Box>
       </Box>
 
       <Box mt="6" mx="3">
+        <Link  to={'/support'}  key="Support">
         <HStack
-          key="Support"
+         
           px="4"
           py="3"
           textColor="#797E82"
@@ -88,6 +92,8 @@ export default function Sidenav() {
           <Icon as={BiSupport}></Icon>
           <Text>Support</Text>
         </HStack>
+        
+        </Link>
       </Box>
     </Stack>
   );
