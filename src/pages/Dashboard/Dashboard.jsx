@@ -12,7 +12,7 @@ import Contacts from './Components/Contacts'
 
 function Dashboard() {
   return (
-    <DashboardLayout title={"Dashboard"}>
+    <DashboardLayout title={"Dashboard"} >
       <Grid gridTemplateColumns={
         {
           base:"repeat(1, 1fr)",
@@ -23,19 +23,59 @@ function Dashboard() {
       }
       
      gap={3}>
-        <GridItem colSpan={2}>
+        <GridItem colSpan={{
+          base:1,
+          xl:2,
+          "2xl":2,
+          md:2,
+          lg:2,
+        }}>
             <PortfolioSection></PortfolioSection>
         </GridItem>
-        <GridItem colSpan={1} pr="2" >
+        <GridItem colSpan={{
+          md:2,
+          xl:1,
+          lg:1,
+          base:1,
+        }} pr={
+          {
+            base:"0",
+            md:"2",
+            lg:"2"
+          }
+        } >
             <PriceSection></PriceSection>
         </GridItem>
-        <GridItem colSpan={1} pl="2">
+        <GridItem colSpan={{
+          md:2,
+          xl:1,
+          lg:1,
+          base:1,
+        }} pl={
+          {
+            base:"0",
+            md:"2",
+            lg:"2"
+          }
+        }>
            <RecentTransactions></RecentTransactions>
         </GridItem>
-        <GridItem colSpan={1} pr="2">
+        <GridItem colSpan={1} pr={
+          {
+            base:"0",
+            md:"2",
+            lg:"2"
+          }
+        }>
          <Loans></Loans>
         </GridItem>
-        <GridItem colSpan={1}  pl="2">
+        <GridItem colSpan={1}  pl={
+          {
+            base:"0",
+            md:"2",
+            lg:"2"
+          }
+        }>
          <Contacts></Contacts>
         </GridItem>
       </Grid>

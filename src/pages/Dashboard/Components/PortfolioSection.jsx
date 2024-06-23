@@ -11,7 +11,9 @@ function PortfolioSection() {
   return (
     <HStack
       bg="white"
-      p="6"
+      px="4"
+      py="2"
+    
       borderRadius="xl"
       spacing={{
         base:"8",

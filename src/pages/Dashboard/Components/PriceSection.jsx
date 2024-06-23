@@ -3,16 +3,34 @@ import React from "react";
 import { FaArrowTrendUp } from "react-icons/fa6";
 
 import { FaBangladeshiTakaSign } from "react-icons/fa6";
-import { Button, Card, HStack, Icon, Img, Stack, Tag, Text } from "@chakra-ui/react";
+import {
+  Button,
+  Card,
+  Flex,
+  HStack,
+  Icon,
+  Img,
+  Stack,
+  Tag,
+  Text,
+} from "@chakra-ui/react";
 
 import { FaArrowUp } from "react-icons/fa6";
 import { FaArrowDown } from "react-icons/fa6";
 import { FaMinusCircle, FaPlusCircle } from "react-icons/fa";
+import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 
 function PriceSection() {
   return (
-    <Card bg="white" borderRadius="xl" p="6" mt="14px" minW="500px" minH="345px">
-      <HStack  justify="space-between" >
+    <Card
+      bg="white"
+      borderRadius="xl"
+      p="6"
+      mt="14px"
+      minW="500px"
+      minH="345px"
+    >
+      <HStack justify="space-between">
         <Stack justify="flex-start">
           <HStack alignItems="center">
             <Text fontSize="14px" textColor="#535D66">
@@ -52,8 +70,7 @@ function PriceSection() {
         <Stack spacing="9">
           <HStack>
             <Button
-
-            spacing="1"
+              spacing="1"
               borderRadius="10px"
               bg="#5F00D9"
               textColor="white"
@@ -65,7 +82,7 @@ function PriceSection() {
                 bg: "#6d0deb",
               }}
             >
-            <FaPlusCircle fontSize="14px" />
+              <FaPlusCircle fontSize="14px" />
 
               <Text px="1">Buy</Text>
             </Button>
@@ -87,25 +104,87 @@ function PriceSection() {
           </HStack>
         </Stack>
       </HStack>
-         
-           <HStack  justify="end" mt="16px">
-           <Img src="/public/Tabs.png" maxW="147px" maxH="27px" ></Img>
-           </HStack>
 
-           <Stack mt="50px">
-
-           <Img src="/public/Vector 27.png" maxW="420px" maxH="116px" ></Img>
-           <HStack justify='space-between' fontSize="12px" textColor="#797E82">
-            <Text>7:15 PM</Text>
-            <Text>12:15 AM</Text>
-            <Text>6:35 AM</Text>
-            <Text>12:15 PM</Text>
-            <Text>5:55 PM</Text>
-           </HStack>
-           </Stack>
-
-          
-         
+      <HStack justify="end" mt="16px">
+        {/* <Img src="/public/Tabs.png" maxW="147px" maxH="27px" ></Img> */}
+        <Tabs variant="soft-rounded">
+          <Flex justify="end">
+            <TabList
+              bg="#EEEEF4"
+              maxH="27px"
+              maxWidth="147xpx"
+              p="1"
+              borderRadius="6px"
+              spacing="0"
+              gap={0}
+            >
+              <Tab
+                _selected={{
+                  bg: "white",
+                  textColor: "black",
+                }}
+                fontSize="14px"
+                p="2"
+                borderRadius="1"
+              >
+                1H
+              </Tab>
+              <Tab
+                _selected={{
+                  bg: "white",
+                  textColor: "black",
+                }}
+                fontSize="14px"
+                p="2"
+                borderRadius="1"
+              >
+                1D
+              </Tab>
+              <Tab
+                _selected={{
+                  bg: "white",
+                  textColor: "black",
+                }}
+                fontSize="14px"
+                p="2"
+                borderRadius="1"
+              >
+                1W
+              </Tab>
+              <Tab
+                _selected={{
+                  bg: "white",
+                  textColor: "black",
+                }}
+                fontSize="14px"
+                p="2"
+                borderRadius="1"
+              >
+                1M
+              </Tab>
+            </TabList>
+          </Flex>
+          <TabPanels>
+            <TabPanel>
+              <Stack>
+                <Img src="/public/Graph.svg" maxW="420px" maxH="116px"></Img>
+                <HStack
+                  justify="space-between"
+                  fontSize="12px"
+                  textColor="#797E82"
+                >
+                  <Text>7:15 PM</Text>
+                  <Text>12:15 AM</Text>
+                  <Text>6:35 AM</Text>
+                  <Text>12:15 PM</Text>
+                  <Text>5:55 PM</Text>
+                </HStack>
+              </Stack>
+            </TabPanel>
+            <TabPanel></TabPanel>
+          </TabPanels>
+        </Tabs>
+      </HStack>
     </Card>
   );
 }
