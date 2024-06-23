@@ -35,7 +35,8 @@ function Dashboard() {
         <GridItem colSpan={{
           md:2,
           xl:1,
-          lg:1,
+          "2xl":1,
+          lg:2,
           base:1,
         }} pr={
           {
@@ -49,7 +50,8 @@ function Dashboard() {
         <GridItem colSpan={{
           md:2,
           xl:1,
-          lg:1,
+          "2xl":1,
+          lg:2,
           base:1,
         }} pl={
           {
