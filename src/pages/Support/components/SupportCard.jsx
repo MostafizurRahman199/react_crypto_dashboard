@@ -35,19 +35,43 @@ export default function SupportCard() {
       gap={6}
     >
 
-  <GridItem colSpan={1}>
+  <GridItem colSpan={{
+          base:2,
+          xl:1,
+          "2xl":1,
+          md:1,
+          lg:1,
+        }}>
       <SupportCommunicate icon={ <IoMdMail />} title={"Contact Us"}></SupportCommunicate>
     </GridItem>   
-    <GridItem colSpan={1}>
+    <GridItem colSpan={{
+          base:2,
+          xl:1,
+          "2xl":1,
+          md:1,
+          lg:1,
+        }}>
    <SupportForm></SupportForm>
     </GridItem>   
 
-    <GridItem colSpan={1}>
+    <GridItem colSpan={{
+          base:2,
+          xl:1,
+          "2xl":1,
+          md:1,
+          lg:1,
+        }}>
     <SupportCommunicate icon={ <IoChatbubble />} title={"Live Chat"}></SupportCommunicate>
 
     </GridItem>
 
-    <GridItem colSpan={1}>
+    <GridItem colSpan={{
+          base:2,
+          xl:1,
+          "2xl":1,
+          md:1,
+          lg:1,
+        }}>
     <ChatBot></ChatBot>
     </GridItem>
 <GridItem>
