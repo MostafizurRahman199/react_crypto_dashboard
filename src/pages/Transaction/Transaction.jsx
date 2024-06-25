@@ -15,6 +15,7 @@ import {
 import { FaDownload } from "react-icons/fa6";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import { CiSearch } from "react-icons/ci";
+import TransactionTable from "./components/TransactionTable";
 
 export default function Transaction() {
   const tabs = [
@@ -37,7 +38,7 @@ export default function Transaction() {
   ];
 
   return (
-    <DashboardLayout>
+    <DashboardLayout title={"Transaction"}>
       <Flex justify="end">
         <Button
           gap={2}
@@ -54,7 +55,7 @@ export default function Transaction() {
           <FaDownload /> Export CSV
         </Button>
       </Flex>
-      <Card>
+      <Card borderRadius="1rem" maxW="960px" maxH="508px">
         <Tabs>
           <TabList pt="4" justifyContent="space-between" px="4">
             <Flex>
@@ -101,7 +102,7 @@ export default function Transaction() {
 
           <TabPanels>
             <TabPanel>
-              <p>one!</p>
+             <TransactionTable></TransactionTable>
             </TabPanel>
             <TabPanel>
               <p>two!</p>

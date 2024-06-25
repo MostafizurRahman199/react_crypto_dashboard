@@ -1,10 +1,11 @@
 import React from 'react'
 import DashboardLayout from '../../Components/DashboardLayout'
+import SupportCard from './components/SupportCard'
 
 function Support() {
   return (
    <DashboardLayout>
-    <h1>Support</h1>
+    <SupportCard></SupportCard>
    </DashboardLayout>
   )
 }
